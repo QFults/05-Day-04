@@ -24,31 +24,47 @@
 // console.log(student1)
 // console.log(teacher1)
 
-class User {
-  constructor (name, email, username) {
-    this.name = name
-    this.email = email
-    this.username = username
-  }
-}
+// class User {
+//   constructor (name, email, username) {
+//     this.name = name
+//     this.email = email
+//     this.username = username
+//   }
+// }
 
-class Student extends User {
-  constructor (name, email, username, gpa, grade) {
-    super(name, email, username)
-    this.gpa = gpa
-    this.grade = grade
-  }
-}
+// class Student extends User {
+//   constructor (name, email, username, gpa, grade) {
+//     super(name, email, username)
+//     this.gpa = gpa
+//     this.grade = grade
+//   }
+// }
 
-class Teacher extends User {
-  constructor (name, email, username, subject) {
-    super(name, email, username)
-    this.subject = subject
-  }
-}
+// class Teacher extends User {
+//   constructor (name, email, username, subject) {
+//     super(name, email, username)
+//     this.subject = subject
+//   }
+// }
 
-const student1 = new Student('Jimmy Doe', 'jimmydoe@gmail.com', 'jimmydoe', 4, 12)
-const teacher1 = new Teacher('John Doe', 'johndoe@gmail.com', 'johndoe', 'Math')
+// const student1 = new Student('Jimmy Doe', 'jimmydoe@gmail.com', 'jimmydoe', 4, 12)
+// const teacher1 = new Teacher('John Doe', 'johndoe@gmail.com', 'johndoe', 'Math')
+
+// console.log(student1)
+// console.log(teacher1)
+
+const user = (name, email, username) => ({ name, email, username })
+
+const student = (name, email, username, gpa, grade) => ({
+  ...user(name, email, username), gpa, grade
+})
+
+const teacher = (name, email, username, subject) => ({
+  ...user(name, email, username), subject
+})
+
+const student1 = student('Jimmy Doe', 'jimmydoe@gmail.com', 'jimmydoe', 4, 12)
+const teacher1 = teacher('John Doe', 'johndoe@gmail.com', 'johndoe', 'Math')
 
 console.log(student1)
 console.log(teacher1)
