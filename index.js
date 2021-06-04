@@ -53,18 +53,18 @@
 // console.log(student1)
 // console.log(teacher1)
 
-const user = (name, email, username) => ({ name, email, username })
+// const user = (name, email, username) => ({ name, email, username })
 
-const student = (name, email, username, gpa, grade) => ({
-  ...user(name, email, username), gpa, grade
-})
+// const student = (name, email, username, gpa, grade) => ({
+//   ...user(name, email, username), gpa, grade
+// })
 
-const teacher = (name, email, username, subject) => ({
-  ...user(name, email, username), subject
-})
+// const teacher = (name, email, username, subject) => ({
+//   ...user(name, email, username), subject
+// })
 
-const student1 = student('Jimmy Doe', 'jimmydoe@gmail.com', 'jimmydoe', 4, 12)
-const teacher1 = teacher('John Doe', 'johndoe@gmail.com', 'johndoe', 'Math')
+// const student1 = student('Jimmy Doe', 'jimmydoe@gmail.com', 'jimmydoe', 4, 12)
+// const teacher1 = teacher('John Doe', 'johndoe@gmail.com', 'johndoe', 'Math')
 
-console.log(student1)
-console.log(teacher1)
+// console.log(student1)
+// console.log(teacher1)
